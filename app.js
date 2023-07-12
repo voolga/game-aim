@@ -97,3 +97,16 @@ function createRandomCircle() {
 function getRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min);
 }
+
+// For winning the game - 
+// start winGame() in browser console right after the countdown started
+
+function winGame() {
+    function winner() {
+        const circle = document.querySelector('.circle');
+        if (circle) {
+            circle.click();
+        }
+    }
+    setInterval(winner, 40)
+}
